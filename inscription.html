@@ -13,21 +13,17 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form action="inscription.php" method="post">
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Prenom">
-                <input type="email" placeholder="Email">
-                <input type="POSITIVE number" placeholder="Age">
-                <input type="text" placeholder="Niveau d'étude">
-                <input type="CONTACT" placeholder="telephone">
-                <input type="text" placeholder="prix par heure">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+                <input type="text" placeholder="Name" name="nom">
+                <input type="text" placeholder="Prenom" name="prenom">
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="password">
+                <button type="submit" name="inscription" value="inscription">Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="" method="post ">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -36,8 +32,8 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="Name" placeholder="Name" name="Name">
+                <input type="password" placeholder="Password" name="Password">
                 <a href="#">Forget Your Password?</a>
                 <button>Sign In</button>
             </form>

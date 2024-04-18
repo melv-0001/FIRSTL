@@ -8,9 +8,12 @@
     <title>Contenu.1</title>
 </head>
 <body> 
-  <div class="navigation">
+  <a href="#" class="btn">
+    <img src="kisspng-index-finger-pointing-clip-art-pointer-finger-cliparts-5a84b52cb4f739.8113332015186465727412.png" alt="" class="icone">
+  </a>
+  <div class="navigation" id="onglets">
     <ul>
-      <li class="list">
+      <li class="list" id="onglet active" data-anim="1">
         <a href="#">
          <span class="icon">
            <ion-icon name="home-outline">
@@ -18,60 +21,116 @@
          <span class="text">Accueil</span>
         </a>
       </li>
-       <li class="list">
-        <a href="#">
+       <li class="list" id="onglet " data-anim="2">
+        <a href="\nounou1\nounou1.html" >
          <span class="icon">
            <ion-icon name="person-outline"></ion-icon>
          </span> 
          <span class="text">Nounous</span>
         </a>
       </li>
-       <li class="list"><!--hihihi-->
-        <a href="#">
+       <li class="list" id="onglet " data-anim="3"><!--hihihi-->
+        <a href="\messagerie\messagerie.html">
          <span class="icon">
            <ion-icon name="chatbubble-outline">
          </span> 
-         <span class="text">Infos</span>
+         <span class="text">Messagerie</span>
         </a>
       </li>
-       <li class="list">
-        <a href="#">
+       <li class="list" id="onglet " data-anim="4">
+        <a href="\parametre\parametre.html">
          <span class="icon">
            <ion-icon name="settings-outline">
          </span> 
-         <span class="text">ET</span>
+         <span class="text">Paramètre</span>
         </a>
       </li>
-       <li class="list">
-        <a href="#">
+       <li class="list" id="onglet " data-anim="5">
+        <a href="\profil\profil.html">
          <span class="icon">
            <ion-icon name="camera-outline">
          </span> 
-         <span class="text">Rrr</span>
+         <span class="text">Profil</span>
         </a>
       </li>
     </ul>
   </div>
-  <div class="indicator"></div>
-  <section class="narine">
-    </section>
+  <!--div class="indicator"></div-->
+  <!--Contenu de nos onglets-->
+  <br>
+  <br>
+  <div class="contenu activeContenu" data-anim="1">
+    <h1>Faites passer à vos enfants,les moments les plus formidables de leurs vie!</h1>
+        <p class="p1">
+            Le Petit Oiseau Chanteur
+           <br> Dans un jardin secret, caché sous les étoiles,
+            Un petit oiseau chanteur, tout en guirlandes de soie,
+            Invite les enfants à danser, à rire, à s'émerveiller,
+            Sur le site Ahoukan, où les nounous attendent.
+           <br>Leurs sourires sont des arcs-en-ciel,
+           Leurs bras, des écharpes douillettes,
+           Elles bercent les rêves des petits cœurs,
+           Et veillent sur eux comme des étoiles bienveillantes.
+     
+          </p>
+
+  </div>
+  <br>
+  
+  <div class="contenu " data-anim="2">
+    <p class="p4" > 
+      <img src="img1.webp" id="img">
+      Alors, chers parents, ouvrez la porte du conte,
+      Naviguez sur vos claviers, cliquez sur l'imaginaire,
+      Réservez une nounou, une fée du quotidien,
+      Qui saura transformer vos journées en poésie lumineuse.
+      AHOUKAN, c'est la clé magique,
+      Pour que vos enfants grandissent en douceur,
+      Entourés d'amour, de jeux et de rires complices,
+      Dans ce monde où chaque sourire est une étoile filante.
+ 
+    </p>
+  </div>
+  <br>
+  <div class="contenu " data-anim="3">
+    <p class="p6">
+      <img src="img1.webp"id="img">
+      Ahoukan,
+      Là où les nounous sont des étoiles bien réelles,
+      Prêtes à illuminer vos vies, à tisser des souvenirs,
+      Et à faire danser vos petits oiseaux chanteurs vers l'infini. 🌟
+  </p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <!--Occupons nous du contenu maintenant-->
+  <div id="Nounous">
+    <!-- Les nounous seront ajoutés ici dynamiquement -->
+  </div>
+  <!--Fin de contenu-->
   <navbar class="mokey">
     <ul> 
       <li>  
-    <form class="search" method="get" action="#">
-      <input type="text" placeholder="Search" required>
-      <button type="submit">Rechercher</button>
-    </form>
-  </li>
+          <form class="search" method="get" action="#">
+             <input type="text" placeholder="Search" id="Rechercher">
+          </form>
+          
+      </li>
+      <LI><button type="submit">Rechercher</button></LI>
+      
 
     </ul>
-    </navbar>
-
+  </navbar>
+  <div class="after"></div>
 
     <!--Footer-->
      <!-- Fonts Links For Icon -->
     
-    <section class="footer">
+    <!--section class="footer">
       <div class="footer-row">
         <div class="footer-col">
           <h4>Info</h4>
@@ -127,14 +186,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section-->
   
+ 
   
-    <script src="contenu.js">
+  <script src="contenu.js">
        
-    </script>
+  </script>
     
-    <script type=module src=" https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type=module src=" https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
