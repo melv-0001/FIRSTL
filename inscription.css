@@ -25,7 +25,8 @@ body{
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 70%;
+    background-attachment: scroll;
 }
 
 .container p{

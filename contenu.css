@@ -9,30 +9,52 @@
     font-family: 'Open Sans', serif;
     
   }
+  *,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
 .root{
   --clr: hsl(240, 10%, 4%);
 }
 body{
-  display:flex;
+  display:inline;
   justify-content: center;
   align-items: center;
   min-height:100vh;
-  background-color: var(--clr);
+  background-color: aliceblue;
   width:100%;
+  background-image: url('back.jpg');
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
+/*contenu de mes onglets
+#onglet{}*/
+.section :active{
+  position:absolute;
+  background-color: #fff;
+  background-attachment:scroll;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
 .navigation{
-  width: 440px;
+  width: 100%;
   height :70px;
   background: #fff;
-  position:absolute;
+  position:fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   top:90%;
   bottom:10%;
-  
+  z-index: 1000;
   
 }
 .navigation ul{
@@ -82,19 +104,10 @@ body{
   opacity: 1;
   transform: translateY(10px);
 }
-.indicator{
-  position: absolute;
-  bottom :50%;
-  top: -50%;
-  width: 70px;
-  height: 70px;
-  background: #3e29fd;
-  border-radius: 50%;
-  border: 6px solid var(--clr);
-  transition: 0.5s;
-  
+#onglets:active{
+  background-color: #7489C6;
 }
-.indicator::before{
+#onglets::before{
   content: '';
   position: absolute;
   left:-22px;
@@ -103,9 +116,9 @@ body{
   height: 20px;
   background:transparent;
   border-top-right-radius: 20px;
-  box-shadow: 0px -10px 0 0 var(--clr);
+  box-shadow: 0px -10px 0 0 #08af96;
 }
-.indicator::after{
+#onglets::after{
   content: '';
   position: absolute;
   right:-22px;
@@ -137,7 +150,7 @@ body{
   z-index:1000;
 }
 .mokey{
-  position: absolute;
+  position:fixed;
   top:0;
   left:0;
   width: 100%;
@@ -147,22 +160,27 @@ body{
   text-align: center;
   text-decoration:none;
   background-color:green;
- 
+  z-index: 1000;
   
 }
 .mokey ul{
   display:flex;
   text-decoration:none;
-  
+  cursor: text;
+  position: fixed;
+  z-index: 1000;
 }
 .mokey ul li{
+  display:flex;
   list-style: none;
   text-decoration:none;
   margin: 0 20px;
+  text-align: end;
+  z-index: 1000;
 }
  /* styling search bar */
  .search input[type=text]{
-  width:50%;
+  width: 200px;
   height:25px;
   border-radius:25px;
   border: none;
@@ -170,20 +188,25 @@ body{
 }
 
 .search{
-  float:right;
+  float:left;
   margin:7px;
 
 }
 
-.search button{
+
+.mokey ul li button{
+  margin-bottom: 2%;
   background: #02652e;
   outline: none;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 50;
   transition: 0.2s ease;
+  text-align: center;
+ 
+  
 }
 .search button:hover{ 
   background: #cecccc;
@@ -197,14 +220,8 @@ body{
 
 
 .footer {
-  position:fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1280px;
-  width: 95%;
+ 
   background: #102f1c;
-  border-radius: 6px;
 }
 
 .footer .footer-row {
@@ -323,3 +340,81 @@ body{
     margin: 10px 0 0 0;
   }
 }
+.btn{
+  height: 40px;
+  width: 40px;
+  background: rgb(147, 224, 89);
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  cursor:pointer;
+}
+.icone{
+  height: 20px;
+}
+.after{
+    content: "";
+    height: 10px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2050;
+    bottom: 0;
+    left: 0;
+  }
+  
+ 
+ .contenu  h1{
+     background-color: rgb(249, 219, 147);
+     height: 0%;
+     width: 0vh;
+     display: inline-flex;
+     margin: 10px;
+ }
+ #img{
+     height: 75%;
+     width: 45%;
+     position: relative;
+     border: solid;
+     border-color: #f5d998;
+     border-radius: 15px ;
+     
+ }
+ p{ display:inline-flex;
+    color: #e3d9ee;
+ }
+/* .contenu{
+  position:absolute;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  box-shadow: #7489C6;
+ }*/
+ .p1{
+  color: #0e0d13;
+  height: 50%;
+  width: 50%;
+  position: relative;
+  left: 45%;
+  background-image: url('Dayflow - Avatar.png');
+  border-radius: 50%;
+ }
+
+ .activeContenu{
+  animation: fade 0.5s forwards;
+ }
+ @keyframes fade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+ }
+ 
+ 
